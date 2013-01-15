@@ -25,12 +25,9 @@ exports['recursive-compass'] = {
   compileFilesAsArray: function(test) {
     'use strict';
     test.expect(3);
-    console.log('-------------------------------------------'.red);
-    console.log('compileFilesAsArray'.red);
+
     var compile_actual = grunt.file.read('test/fixtures/compile.css');
     var compile_expected = grunt.file.read('test/expected/compile_default.css');
-    console.log('compile_actual'.red, compile_actual);
-    console.log('compile_expected'.red, compile_expected);
     test.equal(compile_actual, compile_expected, "should compile compile.scss to compile.css");
 
     var foo_actual = grunt.file.read('test/fixtures/test/foo.css');

@@ -55,14 +55,16 @@ module.exports = function(grunt) {
         ],
         options: {
           sassDir: 'test/fixtures',
-          cssDir: 'test/fixtures'
+          cssDir: 'test/fixtures',
+          noLineComments: true
         }
       },
       compileFilesAsString: {
         files: 'test/fixtures/**/*.{scss,sass}',
         options: {
           sassDir: 'test/fixtures',
-          cssDir: 'test/fixtures'
+          cssDir: 'test/fixtures',
+          noLineComments: true
         }
       },
       compileWithFileExclude: {
@@ -73,7 +75,8 @@ module.exports = function(grunt) {
         options: {
           outputStyle: 'compressed',
           sassDir: 'test/fixtures',
-          cssDir: 'test/fixtures'
+          cssDir: 'test/fixtures',
+          noLineComments: true
         }
       },
       compileWithOptionsCompact: {
@@ -81,7 +84,8 @@ module.exports = function(grunt) {
         options: {
           outputStyle: 'compact',
           sassDir: 'test/fixtures',
-          cssDir: 'test/fixtures'
+          cssDir: 'test/fixtures',
+          noLineComments: true
         }
       },
       compileWithOptionsCompressed: {
@@ -89,7 +93,8 @@ module.exports = function(grunt) {
         options: {
           outputStyle: 'compressed',
           sassDir: 'test/fixtures',
-          cssDir: 'test/fixtures'
+          cssDir: 'test/fixtures',
+          noLineComments: true
         }
       }
     },
@@ -131,18 +136,18 @@ module.exports = function(grunt) {
     'clean',
     'recursive-compass:compileFilesAsArray',
     'nodeunit:compileFilesAsArray',
-    // 'clean',
-    // 'recursive-compass:compileFilesAsString',
-    // 'nodeunit:compileFilesAsString',
-    // 'clean',
-    // 'recursive-compass:compileWithFileExclude',
-    // 'nodeunit:compileWithFileExclude',
-    // 'clean',
-    // 'recursive-compass:compileWithOptionsCompact',
-    // 'nodeunit:compileWithOptionsCompact',
-    // 'clean',
-    // 'recursive-compass:compileWithOptionsCompressed',
-    // 'nodeunit:compileWithOptionsCompressed',
+    'clean',
+    'recursive-compass:compileFilesAsString',
+    'nodeunit:compileFilesAsString',
+    'clean',
+    'recursive-compass:compileWithFileExclude',
+    'nodeunit:compileWithFileExclude',
+    'clean',
+    'recursive-compass:compileWithOptionsCompact',
+    'nodeunit:compileWithOptionsCompact',
+    'clean',
+    'recursive-compass:compileWithOptionsCompressed',
+    'nodeunit:compileWithOptionsCompressed',
     'clean'
   ]);
 
