@@ -1,7 +1,7 @@
 {
   "name": "grunt-recursive-compass",
   "description": "A custom grunt.js plugin that will recursively execute a Compass compile for selected sass/scss files.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/psyrendust/grunt-recursive-compass",
   "author": {
     "name": "Larry Gordon",
