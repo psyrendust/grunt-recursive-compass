@@ -1,0 +1,46 @@
+{
+  "name": "grunt-recursive-compass",
+  "description": "A custom grunt.js task that will recursively watch and execute a compass compile for your sass/scss files.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/psyrendust/grunt-recursive-compass",
+  "author": {
+    "name": "Larry Gordon",
+    "url": "https://github.com/psyrendust/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/psyrendust/grunt-recursive-compass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/psyrendust/grunt-recursive-compass/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/psyrendust/grunt-recursive-compass/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "bin": "bin/grunt-recursive-compass",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "grunt-lib-contrib": "~0.4.x"
+  },
+  "devDependencies": {
+    "grunt": ">=0.3.17",
+    "gaze": "~0.3.2",
+    "grunt-contrib-clean": "~0.3.x",
+    "underscore": "~1.4.3"
+  },
+  "keywords": [
+    "gruntplugin",
+    "grunt.js",
+    "sass",
+    "compass"
+  ]
+}
