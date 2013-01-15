@@ -1,4 +1,4 @@
-# grunt-recursive-compass
+# grunt-recursive-compass [![Build Status](https://travis-ci.org/psyrendust/grunt-recursive-compass.png?branch=master)](https://travis-ci.org/psyrendust/grunt-recursive-compass)
 
 > A custom [grunt.js][grunt] plugin that will recursively execute a [Compass][compass] compile for selected sass/scss files.
 
