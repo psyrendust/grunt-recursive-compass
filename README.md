@@ -298,7 +298,8 @@ grunt
 ```
 
 ## Release History
- * 2013-10-14   v0.1.0   Initial release
+ * 2013-10-14   v0.1.1   Pruned usused packages. Updated broken dependencies.
+ * 2013-10-14   v0.1.0   Initial release.
 
 ## License
 Copyright (c) 2013 Larry Gordon

@@ -13,7 +13,6 @@ module.exports = function(grunt) {
   var _       = require('underscore');
   var fs      = require('fs');
   var path    = require('path');
-  var Gaze    = require('gaze').Gaze;
   var helpers = require('grunt-lib-contrib').init(grunt);
   var cmd     = process.platform === 'win32' ? 'compass.bat' : 'compass';
 
