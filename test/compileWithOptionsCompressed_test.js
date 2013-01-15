@@ -24,6 +24,7 @@ exports['recursive-compass'] = {
 
   compileWithOptionsCompressed: function(test) {
     'use strict';
+
     test.expect(3);
 
     var compile_actual = grunt.file.read('test/fixtures/compile.css');
