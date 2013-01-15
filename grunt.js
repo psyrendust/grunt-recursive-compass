@@ -105,11 +105,11 @@ module.exports = function(grunt) {
 
     // Unit tests.
     nodeunit: {
-      compileFilesAsArray          : ['test/tests/*compileFilesAsArray.js'],
-      compileFilesAsString         : ['test/tests/*compileFilesAsString.js'],
-      compileWithFileExclude       : ['test/tests/*compileWithFileExclude.js'],
-      compileWithOptionsCompact    : ['test/tests/*compileWithOptionsCompact.js'],
-      compileWithOptionsCompressed : ['test/tests/*compileWithOptionsCompressed.js']
+      compileFilesAsArray          : ['test/compileFilesAsArray_test.js'],
+      compileFilesAsString         : ['test/compileFilesAsString_test.js'],
+      compileWithFileExclude       : ['test/compileWithFileExclude_test.js'],
+      compileWithOptionsCompact    : ['test/compileWithOptionsCompact_test.js'],
+      compileWithOptionsCompressed : ['test/compileWithOptionsCompressed_test.js']
     }
 
   });
@@ -131,18 +131,18 @@ module.exports = function(grunt) {
     'clean',
     'recursive-compass:compileFilesAsArray',
     'nodeunit:compileFilesAsArray',
-    'clean',
-    'recursive-compass:compileFilesAsString',
-    'nodeunit:compileFilesAsString',
-    'clean',
-    'recursive-compass:compileWithFileExclude',
-    'nodeunit:compileWithFileExclude',
-    'clean',
-    'recursive-compass:compileWithOptionsCompact',
-    'nodeunit:compileWithOptionsCompact',
-    'clean',
-    'recursive-compass:compileWithOptionsCompressed',
-    'nodeunit:compileWithOptionsCompressed',
+    // 'clean',
+    // 'recursive-compass:compileFilesAsString',
+    // 'nodeunit:compileFilesAsString',
+    // 'clean',
+    // 'recursive-compass:compileWithFileExclude',
+    // 'nodeunit:compileWithFileExclude',
+    // 'clean',
+    // 'recursive-compass:compileWithOptionsCompact',
+    // 'nodeunit:compileWithOptionsCompact',
+    // 'clean',
+    // 'recursive-compass:compileWithOptionsCompressed',
+    // 'nodeunit:compileWithOptionsCompressed',
     'clean'
   ]);
 
