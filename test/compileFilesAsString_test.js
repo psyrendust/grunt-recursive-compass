@@ -29,15 +29,15 @@ exports['recursive-compass'] = {
 
     var compile_actual = grunt.file.read('test/fixtures/compile.css');
     var compile_expected = grunt.file.read('test/expected/compile_default.css');
-    test.equal(compile_actual, compile_expected, "should compile compile.scss to compile.css");
+    test.equal(compile_actual, compile_expected, "should compile compile.scss to compile.css using Files as a String");
 
     var foo_actual = grunt.file.read('test/fixtures/test/foo.css');
     var foo_expected = grunt.file.read('test/expected/foo_default.css');
-    test.equal(foo_actual, foo_expected, "should compile foo.scss to foo.css");
+    test.equal(foo_actual, foo_expected, "should compile foo.scss to foo.css using Files as a String");
 
     var test_actual = grunt.file.read('test/fixtures/test/test.css');
     var test_expected = grunt.file.read('test/expected/test_default.css');
-    test.equal(test_actual, test_expected, "should compile test.scss to test.css");
+    test.equal(test_actual, test_expected, "should compile test.scss to test.css using Files as a String");
 
     test.done();
   }

@@ -53,6 +53,7 @@ module.exports = function(grunt) {
         files: [
           'test/fixtures/**/*.{scss,sass}'
         ],
+        exclude: ['test/fixtures/**/testImportPath.{scss,sass}'],
         options: {
           sassDir: 'test/fixtures',
           cssDir: 'test/fixtures',
@@ -61,6 +62,7 @@ module.exports = function(grunt) {
       },
       compileFilesAsString: {
         files: 'test/fixtures/**/*.{scss,sass}',
+        exclude: ['test/fixtures/**/testImportPath.{scss,sass}'],
         options: {
           sassDir: 'test/fixtures',
           cssDir: 'test/fixtures',
@@ -70,7 +72,8 @@ module.exports = function(grunt) {
       compileWithFileExclude: {
         files: 'test/fixtures/**/*.{scss,sass}',
         exclude: [
-          'test/fixtures/**/foo.{scss,sass}'
+          'test/fixtures/**/foo.{scss,sass}',
+          'test/fixtures/**/testImportPath.{scss,sass}'
         ],
         options: {
           outputStyle: 'compressed',
@@ -81,6 +84,7 @@ module.exports = function(grunt) {
       },
       compileWithOptionsCompact: {
         files: 'test/fixtures/**/*.{scss,sass}',
+        exclude: ['test/fixtures/**/testImportPath.{scss,sass}'],
         options: {
           outputStyle: 'compact',
           sassDir: 'test/fixtures',
@@ -90,11 +94,22 @@ module.exports = function(grunt) {
       },
       compileWithOptionsCompressed: {
         files: 'test/fixtures/**/*.{scss,sass}',
+        exclude: ['test/fixtures/**/testImportPath.{scss,sass}'],
         options: {
           outputStyle: 'compressed',
           sassDir: 'test/fixtures',
           cssDir: 'test/fixtures',
           noLineComments: true
+        }
+      },
+      compileWithOptionsImportPath: {
+        files: ['test/fixtures/**/testImportPath.{scss,sass}'],
+        options: {
+          outputStyle: 'compressed',
+          sassDir: 'test/fixtures',
+          cssDir: 'test/fixtures',
+          noLineComments: true,
+          importPath: 'test/sass'
         }
       }
     },
@@ -114,7 +129,8 @@ module.exports = function(grunt) {
       compileFilesAsString         : ['test/compileFilesAsString_test.js'],
       compileWithFileExclude       : ['test/compileWithFileExclude_test.js'],
       compileWithOptionsCompact    : ['test/compileWithOptionsCompact_test.js'],
-      compileWithOptionsCompressed : ['test/compileWithOptionsCompressed_test.js']
+      compileWithOptionsCompressed : ['test/compileWithOptionsCompressed_test.js'],
+      compileWithOptionsImportPath : ['test/compileWithOptionsImportPath_test.js']
     }
 
   });
@@ -144,6 +160,9 @@ module.exports = function(grunt) {
     'clean',
     'recursive-compass:compileWithOptionsCompressed',
     'nodeunit:compileWithOptionsCompressed',
+    'clean',
+    'recursive-compass:compileWithOptionsImportPath',
+    'nodeunit:compileWithOptionsImportPath',
     'clean'
   ]);
 

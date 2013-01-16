@@ -1,5 +1,5 @@
 var grunt = require('grunt');
-var fs = require('fs');
+
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -22,21 +22,14 @@ var fs = require('fs');
 
 exports['recursive-compass'] = {
 
-  compileWithFileExclude: function(test) {
+  compileWithOptionsImportPath: function(test) {
     'use strict';
 
-    test.expect(3);
+    test.expect(1);
 
-    var compile_actual = grunt.file.read('test/fixtures/compile.css');
-    var compile_expected = grunt.file.read('test/expected/compile_compressed.css');
-    test.equal(compile_actual, compile_expected, "should compile compile.scss to compile.css");
-
-    var foo_exists = fs.existsSync('test/fixtures/test/foo.css');
-    test.equal(foo_exists, false, "should exclude foo.scss from compiling");
-
-    var test_actual = grunt.file.read('test/fixtures/test/test.css');
-    var test_expected = grunt.file.read('test/expected/test_compressed.css');
-    test.equal(test_actual, test_expected, "should compile test.scss to test.css");
+    var compile_actual = grunt.file.read('test/fixtures/testImportPath.css');
+    var compile_expected = grunt.file.read('test/expected/testImportPath.css');
+    test.equal(compile_actual, compile_expected, "should compile CSS with importPath option set.");
 
     test.done();
   }

@@ -29,15 +29,15 @@ exports['recursive-compass'] = {
 
     var compile_actual = grunt.file.read('test/fixtures/compile.css');
     var compile_expected = grunt.file.read('test/expected/compile_compact.css');
-    test.equal(compile_actual, compile_expected, "should compile compile.scss to compile.css");
+    test.equal(compile_actual, compile_expected, "should compile compile.scss with compact option");
 
     var foo_actual = grunt.file.read('test/fixtures/test/foo.css');
     var foo_expected = grunt.file.read('test/expected/foo_compact.css');
-    test.equal(foo_actual, foo_expected, "should compile foo.scss to foo.css");
+    test.equal(foo_actual, foo_expected, "should compile foo.scss with compact option");
 
     var test_actual = grunt.file.read('test/fixtures/test/test.css');
     var test_expected = grunt.file.read('test/expected/test_compact.css');
-    test.equal(test_actual, test_expected, "should compile test.scss to test.css");
+    test.equal(test_actual, test_expected, "should compile test.scss with compact option");
 
     test.done();
   }

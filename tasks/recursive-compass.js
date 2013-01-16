@@ -59,6 +59,13 @@ module.exports = function(grunt) {
     filesToExclude = grunt.file.expandFiles(filesToExclude);
     filesAry = grunt.file.expandFiles(filesAry);
 
+    // Compass doesn't have a long flag for --import-path
+    if (options.importPath) {
+      myArgs = myArgs.map(function(el) {
+        return el.replace('--import-path', '-I');
+      });
+    }
+
     grunt.verbose.writeflags(options, 'Options');
 
     filesAry.forEach(function(file){
