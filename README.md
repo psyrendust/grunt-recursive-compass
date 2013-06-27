@@ -298,11 +298,10 @@ grunt
 ```
 
 ## Release History
- * 2012-10-15   v0.1.4   Converts '--import-path' option to '-I'.
- * 2012-10-15   v0.1.3   Fixed broken tests on Travis-CI.
- * 2012-10-15   v0.1.2   Fixed broken tests on Travis-CI.
- * 2012-10-14   v0.1.1   Pruned usused packages. Updated broken dependencies.
- * 2012-10-14   v0.1.0   Initial release.
+ * 2013-01-15   v0.1.4   Converts '--import-path' option to '-I'.
+ * 2013-01-15   v0.1.3   Fixed broken tests on Travis-CI.
+ * 2013-01-14   v0.1.1   Pruned usused packages. Updated broken dependencies.
+ * 2013-01-14   v0.1.0   Initial release.
 
 ## License
 Copyright (c) 2013 Larry Gordon
