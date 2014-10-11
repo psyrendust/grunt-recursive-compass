@@ -1,6 +1,8 @@
 .npmignore
 .editorconfig
+.eslintrc
 .gitattributes
 .travis.yml
 test
-grunt.js
+tmp
+Gruntfile.js
