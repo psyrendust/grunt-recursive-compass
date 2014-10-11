@@ -12,33 +12,10 @@
 
 # OS or Editor folders
 .DS_Store
-.cache
-.project
-.settings
-.tmproj
-nbproject
 Thumbs.db
 npm-debug.log
 
-# Dreamweaver added files
-_notes
-dwsync.xml
-
-# Komodo
-*.komodoproject
-.komodotools
-
 # Folders to ignore
-.hg
-.svn
-.CVS
-intermediate
-.idea
-intermediate
+node_modules
 temp
 tmp
-node_modules
-
-# build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties
