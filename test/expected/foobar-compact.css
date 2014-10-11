@@ -13,7 +13,7 @@ q:before, q:after, blockquote:before, blockquote:after { content: ""; content: n
 
 a img { border: none; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
 li { font-family: serif; font-weight: bold; font-size: 1.2em; }
 
@@ -21,4 +21,4 @@ li { font-family: serif; font-weight: bold; font-size: 1.2em; }
 
 .border { padding: 8px; margin: 8px; border-color: #3bbfce; }
 
-.foo { padding: 4px; margin: 2px; }
+.foobar { padding: 4px; margin: 2px; }
